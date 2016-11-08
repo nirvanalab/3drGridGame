@@ -1,5 +1,13 @@
 # 3drGridGame
 
+## Video walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='3drGridGame.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 * [x] Create a view with a 5x5 grid of cells (see example picture below).
 * [x] Place the prize on a random cell in the grid (but not in any of the corners).
 * [x] Spawn two players in different corners of the grid. The players will initially occupy one cell.
@@ -18,10 +26,3 @@ TODO
 * [ ] Backtrack should only move to the previous position. Currently it can backtrack to adjacent item if it is part of the player path.
 * [ ] Add animations to when player wins and highlight score
 
-## Video walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='3drGridGame.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
