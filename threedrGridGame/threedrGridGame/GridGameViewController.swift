@@ -17,6 +17,8 @@ class GridGameViewController: UIViewController {
   
   @IBOutlet weak var player2ScoreLbl: UILabel!
   
+  
+  @IBOutlet weak var autoStartSwitch: UISwitch!
   @IBOutlet weak var gameOverLbl: UILabel!
   let gameBrain = GameBrain.sharedInstance;
   
@@ -67,18 +69,26 @@ class GridGameViewController: UIViewController {
     self.shouldSetup = true;
     self.player1ScoreLbl.text = String(gameBrain.gameScore.player1)
     self.player2ScoreLbl.text = String (gameBrain.gameScore.player2)
+    if ( autoStartSwitch.isOn ) {
+       startNewGame()
+    }
+   
   }
   
-  @IBAction func startBtnClicked(_ sender: UIButton) {
+  func startNewGame() {
     if ( shouldSetup ) {
       gameBrain.reset()
       self.gridCollectionView.reloadData()
       shouldSetup = false
     }
-   
+    
     self.gameOverLbl.isHidden = true;
     self.startGameBtn.isHidden = true;
     gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.movePlayer), userInfo: nil, repeats: true);
+  }
+  
+  @IBAction func startBtnClicked(_ sender: UIButton) {
+    startNewGame()
   }
   
   
