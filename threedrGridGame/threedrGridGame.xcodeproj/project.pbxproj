@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E155D08C1DD1661B007D2DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E155D08B1DD1661B007D2DEE /* AppDelegate.swift */; };
+		E155D0911DD1661B007D2DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E155D08F1DD1661B007D2DEE /* Main.storyboard */; };
+		E155D0931DD1661B007D2DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E155D0921DD1661B007D2DEE /* Assets.xcassets */; };
+		E155D0961DD1661B007D2DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E155D0941DD1661B007D2DEE /* LaunchScreen.storyboard */; };
+		E155D09E1DD168B2007D2DEE /* GridGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E155D09D1DD168B2007D2DEE /* GridGameViewController.swift */; };
+		E155D0A01DD16962007D2DEE /* GridGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E155D09F1DD16962007D2DEE /* GridGameCollectionViewCell.swift */; };
+		E1CFEB4E1DD173F100DC3F85 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CFEB4D1DD173F100DC3F85 /* GameBrain.swift */; };
+		E1CFEB501DD1868100DC3F85 /* GameTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CFEB4F1DD1868100DC3F85 /* GameTracker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E155D0881DD1661B007D2DEE /* threedrGridGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threedrGridGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E155D08B1DD1661B007D2DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E155D0901DD1661B007D2DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E155D0921DD1661B007D2DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E155D0951DD1661B007D2DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E155D0971DD1661B007D2DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E155D09D1DD168B2007D2DEE /* GridGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridGameViewController.swift; sourceTree = "<group>"; };
+		E155D09F1DD16962007D2DEE /* GridGameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1CFEB4D1DD173F100DC3F85 /* GameBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
+		E1CFEB4F1DD1868100DC3F85 /* GameTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTracker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E155D0851DD1661B007D2DEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E155D07F1DD1661B007D2DEE = {
+			isa = PBXGroup;
+			children = (
+				E155D08A1DD1661B007D2DEE /* threedrGridGame */,
+				E155D0891DD1661B007D2DEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E155D0891DD1661B007D2DEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E155D0881DD1661B007D2DEE /* threedrGridGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E155D08A1DD1661B007D2DEE /* threedrGridGame */ = {
+			isa = PBXGroup;
+			children = (
+				E155D09D1DD168B2007D2DEE /* GridGameViewController.swift */,
+				E155D08B1DD1661B007D2DEE /* AppDelegate.swift */,
+				E155D08F1DD1661B007D2DEE /* Main.storyboard */,
+				E155D0921DD1661B007D2DEE /* Assets.xcassets */,
+				E155D0941DD1661B007D2DEE /* LaunchScreen.storyboard */,
+				E155D0971DD1661B007D2DEE /* Info.plist */,
+				E155D09F1DD16962007D2DEE /* GridGameCollectionViewCell.swift */,
+				E1CFEB4D1DD173F100DC3F85 /* GameBrain.swift */,
+				E1CFEB4F1DD1868100DC3F85 /* GameTracker.swift */,
+			);
+			path = threedrGridGame;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E155D0871DD1661B007D2DEE /* threedrGridGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E155D09A1DD1661B007D2DEE /* Build configuration list for PBXNativeTarget "threedrGridGame" */;
+			buildPhases = (
+				E155D0841DD1661B007D2DEE /* Sources */,
+				E155D0851DD1661B007D2DEE /* Frameworks */,
+				E155D0861DD1661B007D2DEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = threedrGridGame;
+			productName = threedrGridGame;
+			productReference = E155D0881DD1661B007D2DEE /* threedrGridGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E155D0801DD1661B007D2DEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Vidhur Voora";
+				TargetAttributes = {
+					E155D0871DD1661B007D2DEE = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = E155D0831DD1661B007D2DEE /* Build configuration list for PBXProject "threedrGridGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E155D07F1DD1661B007D2DEE;
+			productRefGroup = E155D0891DD1661B007D2DEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E155D0871DD1661B007D2DEE /* threedrGridGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E155D0861DD1661B007D2DEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E155D0961DD1661B007D2DEE /* LaunchScreen.storyboard in Resources */,
+				E155D0931DD1661B007D2DEE /* Assets.xcassets in Resources */,
+				E155D0911DD1661B007D2DEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E155D0841DD1661B007D2DEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1CFEB4E1DD173F100DC3F85 /* GameBrain.swift in Sources */,
+				E155D09E1DD168B2007D2DEE /* GridGameViewController.swift in Sources */,
+				E155D0A01DD16962007D2DEE /* GridGameCollectionViewCell.swift in Sources */,
+				E155D08C1DD1661B007D2DEE /* AppDelegate.swift in Sources */,
+				E1CFEB501DD1868100DC3F85 /* GameTracker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E155D08F1DD1661B007D2DEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E155D0901DD1661B007D2DEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E155D0941DD1661B007D2DEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E155D0951DD1661B007D2DEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E155D0981DD1661B007D2DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E155D0991DD1661B007D2DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E155D09B1DD1661B007D2DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = threedrGridGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vidhurvooora.threedrGridGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E155D09C1DD1661B007D2DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = threedrGridGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vidhurvooora.threedrGridGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E155D0831DD1661B007D2DEE /* Build configuration list for PBXProject "threedrGridGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E155D0981DD1661B007D2DEE /* Debug */,
+				E155D0991DD1661B007D2DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E155D09A1DD1661B007D2DEE /* Build configuration list for PBXNativeTarget "threedrGridGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E155D09B1DD1661B007D2DEE /* Debug */,
+				E155D09C1DD1661B007D2DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E155D0801DD1661B007D2DEE /* Project object */;
+}
