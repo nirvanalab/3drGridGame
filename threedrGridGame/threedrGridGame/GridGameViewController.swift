@@ -10,19 +10,19 @@ import UIKit
 
 class GridGameViewController: UIViewController {
 
-  
+  //shows the grid
   @IBOutlet weak var gridCollectionView: UICollectionView!
-  
+  //player 1 score
   @IBOutlet weak var player1ScoreLbl: UILabel!
-  
+  //player 2 score
   @IBOutlet weak var player2ScoreLbl: UILabel!
-  
-  
+  //determines if the next game should auto start
   @IBOutlet weak var autoStartSwitch: UISwitch!
+  //
   @IBOutlet weak var gameOverLbl: UILabel!
+  
   let gameBrain = GameBrain.sharedInstance;
   
-  var isPlayer1Turn = true;
   var gameTimer:Timer = Timer();
   var shouldSetup = true
   
@@ -44,20 +44,11 @@ class GridGameViewController: UIViewController {
     }
     
   func movePlayer()  {
-    
     if (gameBrain.gameTracker.gameOver) {
       gameOver()
       return
     }
-    if ( isPlayer1Turn ) {
-      gameBrain.movePlayer1()
-      isPlayer1Turn = false
-    }
-    else {
-      gameBrain.movePlayer2()
-      isPlayer1Turn = true
-    }
-    
+    gameBrain.movePlayer()
     self.gridCollectionView.reloadData()
   }
   
@@ -81,7 +72,6 @@ class GridGameViewController: UIViewController {
       self.gridCollectionView.reloadData()
       shouldSetup = false
     }
-    
     self.gameOverLbl.isHidden = true;
     self.startGameBtn.isHidden = true;
     gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.movePlayer), userInfo: nil, repeats: true);
@@ -90,9 +80,8 @@ class GridGameViewController: UIViewController {
   @IBAction func startBtnClicked(_ sender: UIButton) {
     startNewGame()
   }
-  
-  
 }
+
 extension GridGameViewController : UICollectionViewDataSource,UICollectionViewDelegate {
   
   func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -109,6 +98,8 @@ extension GridGameViewController : UICollectionViewDataSource,UICollectionViewDe
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridGameCellID",
                                                   for: indexPath) as! GridGameCollectionViewCell
     cell.circleView.layer.cornerRadius = cell.circleView.frame.width/2;
+    cell.circleView.layer.borderColor = UIColor.black.cgColor
+    cell.circleView.layer.borderWidth = 3
     cell.circleView.backgroundColor = UIColor(red: 255/255, green: 212/255, blue: 90/255, alpha: 1.0)
     cell.imageView.isHidden = true
     

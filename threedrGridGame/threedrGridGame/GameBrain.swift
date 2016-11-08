@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Main logic for running the game
+// Could have setup as a Struct instead of Class since it mostly deals with values
 class GameBrain: NSObject {
   
   //shared instance
@@ -19,6 +21,7 @@ class GameBrain: NSObject {
   let gameMatrixRows = 5
   let gameMatrixCols = 5
   
+  var isPlayer1Turn = true;
   
   //random initial treasure position
   func fetchNewTreasurePosition() -> (row:Int,col:Int) {
@@ -58,13 +61,14 @@ class GameBrain: NSObject {
     return [(p1Row,p1Col),(p2Row,p2Col)]
   }
   
+  //reset game
   func reset() {
     gameTracker = GameTracker()
     setupNewGame()
   }
 
+  //sets new game positions
   func setupNewGame() {
-    
     
     //set treasure position
     let treasurePos:(Int,Int) = fetchNewTreasurePosition();
@@ -95,6 +99,7 @@ class GameBrain: NSObject {
   func moveUp(pos:(row:Int,col:Int))->(rowPos:Int,colPos:Int) {
     return (pos.row-1,pos.col)
   }
+  
   
   func isPosInPlayer1Path(pos:(row:Int,col:Int)) -> Bool {
     for (row,col) in gameTracker.player1Path {
@@ -141,6 +146,18 @@ class GameBrain: NSObject {
     return false;
   }
   
+  func movePlayer()
+  {
+    if ( isPlayer1Turn ) {
+      movePlayer1()
+      isPlayer1Turn = false
+    }
+    else {
+      movePlayer2()
+      isPlayer1Turn = true
+    }
+  }
+  
   func movePlayer1()
   {
     var waitingToMove = true
@@ -168,10 +185,6 @@ class GameBrain: NSObject {
         if ( isPosInPlayer1Path(pos: (row: pos.0, col: pos.1))) {
           //if already existing remove it from the path
           gameTracker.player1Path = removePosFromPath(items: gameTracker.player1Path, pos: gameTracker.player1Pos)
-//          let index = indexOfPosInPath(items: gameTracker.player1Path, pos: gameTracker.player1Pos)
-//          if index < gameTracker.player1Path.count {
-//            gameTracker.player1Path.remove(at: index)
-//          }
         }
         
         gameTracker.player1Pos = pos
@@ -214,10 +227,6 @@ class GameBrain: NSObject {
         if ( isPosInPlayer2Path(pos: (row: pos.0, col: pos.1))) {
           //if already existing remove it from the path
           gameTracker.player2Path = removePosFromPath(items: gameTracker.player2Path, pos: gameTracker.player2Pos)
-//          let index = indexOfPosInPath(items: gameTracker.player2Path, pos:gameTracker.player2Pos)
-//          if index < gameTracker.player2Path.count {
-//              gameTracker.player2Path.remove(at: index)
-//          }
         
         }
         

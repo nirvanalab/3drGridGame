@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Data struct to keep track of the game
 struct GameTracker {
   var treasurePos:(rowPos:Int,colPos:Int) = (0,0)
   var player1Pos:(rowPos:Int,colPos:Int) = (0,0)
@@ -18,6 +19,7 @@ struct GameTracker {
   
 }
 
+//Keeps track of the score
 struct GameScore {
   var player1 = 0
   var player2 = 0
